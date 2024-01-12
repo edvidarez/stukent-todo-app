@@ -1,0 +1,21 @@
+.todo-list-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.todo-list-container ul {
+  padding: 0;
+}
+
+.todo-list-title {
+  background: #4094CC;
+  font-family: 'Figtree';
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  display: inline-block;
+  margin: 0px;
+  padding: 4px 16px;
+  border-radius: 16px;
+}

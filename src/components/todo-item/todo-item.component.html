@@ -1,0 +1,10 @@
+<li class="todo-item" [ngClass]="{ 'completed': item.completed } ">
+  <div class="item-header" [ngClass]="{ 'completed': parentCompleted || item.completed }">
+    <input type="checkbox" [checked]="parentCompleted||item.completed" (change)="onToggle(item)" />
+    <span>{{ item.title }}</span>
+  </div>
+  <ul *ngIf="item.subTodos" class="item-sub-todos">
+    <app-todo-item *ngFor="let subTodo of item.subTodos" [item]="subTodo"
+      [parentCompleted]=" item.completed"></app-todo-item>
+  </ul>
+</li>

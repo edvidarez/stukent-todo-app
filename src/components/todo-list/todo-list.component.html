@@ -1,0 +1,6 @@
+<div class="todo-list-container">
+  <h1 class="todo-list-title">{{title}}</h1>
+  <ul>
+    <app-todo-item *ngFor="let item of list" [item]="item"></app-todo-item>
+  </ul>
+</div>

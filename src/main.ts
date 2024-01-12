@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import 'zone.js';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [TodoListComponent],
   template: `
-    <h1>Hello from Stukent!</h1>
-    <a target="_blank" href="https://www.figma.com/file/1adNTPYmtVQqwEeUR6LkGn/to-dos?type=design&node-id=1%3A2&mode=design&t=NyC5VIwzTQ20lJ5r-1">
-      Start with this Figma link
-    </a>
+    <div class="page">
+      <app-todo-list [title]="'TO-DOS'" ></app-todo-list>
+    </div>
   `,
 })
 export class App {
